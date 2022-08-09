@@ -34,8 +34,8 @@ npm i ejs --save
 npm i bootstrap --save 
 ```
 
-5. `sequelize` Module installieren
+5. `sequelize` und `sqlite3` Module installieren
 
 ```bash
-npm i --save sequelize
+npm i --save sequelize sqlite3
 ```
