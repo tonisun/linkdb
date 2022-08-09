@@ -4,6 +4,9 @@ let sequelize = new Sequelize (null, null, null, {
     storage: __dirname + "/../dbs/app.db"
 })
 
+/**
+ * Model Url mapped show
+ */
 let Url = sequelize.define ("url", {
     url: {
         type: Sequelize.STRING,
@@ -15,6 +18,9 @@ let Url = sequelize.define ("url", {
     }
 })
 
+/**
+ * 
+ */
 module.exports = {
     sequelize: sequelize,
     Url: Url
