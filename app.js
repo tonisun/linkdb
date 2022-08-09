@@ -1,6 +1,8 @@
 let express = require("express")
 
-var app = express()
+let app = express()
+
+let models = require("./models")
 
 app.set("view engine", "ejs")
 app.set("views", __dirname + "/views")
