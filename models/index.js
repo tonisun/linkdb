@@ -19,4 +19,8 @@ Url.sync ({force: true}).then ( function () {
     // if (err) 
     console.log('MSG-Log: Tabelle wurde erstellt')
     
+    Url.create ({
+        url: "https://org.egosanto.de",
+        desc: "Unemployed software developer in Cologne Germany"
+    })
 })
