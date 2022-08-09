@@ -14,7 +14,7 @@ oder
 node init -y
 ```
 
-2. `express` Module installieren (wieso nicht express-generator -g ???)
+2. `express` Module installieren (wieso nicht `express-generator -g` ???)
 
 ```bash
 npm i express --save 
