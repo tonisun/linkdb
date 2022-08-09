@@ -23,11 +23,19 @@ npm i express --save
 ```
 
 3. `ejs` Module installieren
+
 ```bash
 npm i ejs --save 
 ```
 
 4. `bootstrap` Module installieren
+
 ```bash
 npm i bootstrap --save 
+```
+
+5. `sequelize` Module installieren
+
+```bash
+npm i --save sequelize
 ```
