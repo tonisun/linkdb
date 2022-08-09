@@ -1,4 +1,4 @@
-# Node.js App auf Express und SQLite
+# Node.js App auf Express, SQLite und Sequelize als ORM (Object Relational Mapper)
 
 ---
 ![](/public/img/colorful-wall_sm1.png)
