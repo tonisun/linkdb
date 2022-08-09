@@ -1,20 +1,26 @@
-let express = require("express")
+let express = require ("express")
 
-let app = express()
+let app = express ()
 
-let models = require("./models")
+let models = require ("./models")
+console.dir(models);
 
-app.set("view engine", "ejs")
-app.set("views", __dirname + "/views")
+models.sequelize.sync ({force: true}).then (function () {
+    console.log('Models-Log: 1. TABELLEN ERSTELLT');
 
-app.use("/public", express.static("public"))
+    app.set ("view engine", "ejs")
+    app.set ("views", __dirname + "/views")
 
-app.get("/", function (req, res) {
-    res.render("pages/index")
+    app.use ("/public", express.static("public"))
+
+    app.get ("/", function (req, res) {
+        res.render ("pages/index")
+    })
+
+    app.listen(8080, function () {
+        console.log('2. Server-Log: Webserver wurde auf Port 8080 gestartet');  
+    })    
 })
 
 
 
-
-
-app.listen(80)
