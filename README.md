@@ -2,7 +2,7 @@
 
 ![](/public/img/colorful-wall_sm1.png)
 >## Projekt Settings (Visual Studio Code)
-![](/public/img/LiveSassCompiler.png)![](/public/img/settings.json4LSC.png)
+![](/public/img/LiveSassCompiler.png)![](/public/img/settings.json4LSC_sm.png)
 
 1. `package.json` erstellen
 ```bash
