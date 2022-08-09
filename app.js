@@ -18,7 +18,7 @@ models.sequelize.sync ({force: true}).then (function () {
     })
 
     app.listen(8080, function () {
-        console.log('2. Server-Log: Webserver wurde auf Port 8080 gestartet');  
+        console.log('Server-Log: 2. Webserver wurde auf Port 8080 gestartet');  
     })    
 })
 
