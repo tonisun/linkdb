@@ -2,9 +2,9 @@
 
 ---
 ![](/public/img/colorful-wall_sm1.png)
-
 >## Projekt Settings (Visual Studio Code)
-![](/public/img/Screenshot%202022-08-09%20155651.png)
+![](/public/img/Screenshot%202022-08-09%20155651.png)![](/public/img/LiveSassCompiler.png)![](/public/img/settings.json4LSC.png)
+
 1. `package.json` erstellen
 ```bash
 node init 
