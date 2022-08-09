@@ -17,6 +17,6 @@ let Url = sequelize.define ("url", {
 
 Url.sync ({force: true}).then ( function () {
     // if (err) 
-    console.log('MSG-Log: Tabelle wurde erstellt');
+    console.log('MSG-Log: Tabelle wurde erstellt')
     
 })

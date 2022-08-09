@@ -1,6 +1,5 @@
-# Node.js App auf Express, SQLite und Sequelize als ORM (Object Relational Mapper)
+ # <img src="/public/img/logo.svg" width="60px" alt="Sequelize Logo"> Node.js App auf Express, SQLite und Sequelize als ORM (Object Relational Mapper)
 
----
 ![](/public/img/colorful-wall_sm1.png)
 >## Projekt Settings (Visual Studio Code)
 ![](/public/img/LiveSassCompiler.png)![](/public/img/settings.json4LSC.png)
