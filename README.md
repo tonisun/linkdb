@@ -3,6 +3,8 @@
 ---
 ![](/public/img/colorful-wall_sm1.png)
 
+>## Projekt Settings
+
 1. `package.json` erstellen
 ```bash
 node init 
