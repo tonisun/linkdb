@@ -5,6 +5,8 @@
 ---
 
 ![](/public/img/colorful-wall_sm1.png)
+@autor: Jannis Seeman & Toni Zeidler <br>
+@datum: 2022-08-10
 
 ![app look nice](/public/img/app.png)
 
