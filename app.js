@@ -20,7 +20,7 @@ models.sequelize.sync ({force: true}).then (function () {
 
     app.get ("/", function (req, res) {
         let id = parseInt (req.query.id, 10)
-        console.log(id)
+        // console.log(id)
         if (isNaN(id)) {
             res.render ("pages/index")
         } else {
@@ -37,12 +37,12 @@ models.sequelize.sync ({force: true}).then (function () {
     })
 
     app.post ("/create", function (req, res) {
-        console.dir (req.body)
+        //console.dir (req.body)
         models.Url.create ({
             url: req.body.url,
             desc: req.body.desc
         }).then (function (obj) {
-            console.dir (obj.id)
+            //console.log (obj.id)
             
             res.redirect ("/created?id=" + obj.id)
             console.log ('INS-Log: Datensatz wurde in app.db eingefühgt.')
@@ -50,17 +50,23 @@ models.sequelize.sync ({force: true}).then (function () {
     })
 
     app.get ("/created", function (req, res) {
+        console.log('req.query:');
+        console.dir(req.query);
+        console.log('end req.query');
+        
         let id = parseInt (req.query.id, 10)
         // models.Url.findById(id).then (function (obj) {
         models.Url.findByPk(id).then (function (obj) {
             if (obj == null) {
                 res.end ("FEHLER")
             } else {
-                console.dir (obj)
+                console.dir (obj.dataValues)
                 res.render("pages/created", {
-                    id: obj.query.id,
-                    url: obj.query.url,
-                    desc: obj.query.desc
+                    id: obj.dataValues.id,
+                    url: obj.dataValues.url,
+                    desc: obj.dataValues.desc,
+                    createdAt: obj.dataValues.createdAt,
+                    updatedAt: obj.dataValues.updatedAt
                 })
             }
         })
