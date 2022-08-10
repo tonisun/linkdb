@@ -9,6 +9,7 @@
 
 - [Projekt Settings (Visual Studio Code)](#projekt-settings-visual-studio-code)
   - [`package.json` erstellen](#packagejson-erstellen)
+  - [`express` Module installieren](#express-module-installieren)
 - [Mapping mit `sequelize`](#mapping-mit-sequelize)
 - []()
 - []()
@@ -33,7 +34,7 @@ oder
 node init -y
 ```
 
-2. `express` Module installieren (wieso nicht `express-generator -g` ???)
+### `express` Module installieren (wieso nicht `express-generator -g` ???)
 
 ```bash
 npm i express --save 
