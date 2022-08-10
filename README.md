@@ -8,7 +8,7 @@
 >## Inhalte 
 
 - [Projekt Settings (Visual Studio Code)](#projekt-settings-visual-studio-code)
-  - [`package.json` erstellen](#package.json-erstellen)
+  - [`package.json` erstellen](#package-json-erstellen)
 - [Mapping mit `sequelize`](#mapping-mit-sequelize)
 - []()
 - []()
