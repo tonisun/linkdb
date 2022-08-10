@@ -3,12 +3,26 @@
 ![](/public/img/colorful-wall_sm1.png)
 
 ---
-![](/public/img/app.png)
+![app look nice](/public/img/app.png)
+
+>## Inhalte 
+
+- [Projekt Settings (Visual Studio Code)](#projekt-settings-visual-studio-code)
+  - [`package.json` erstellen](#`package.json`-erstellen)
+- [Mapping mit `sequelize`](#mapping-mit-sequelize)
+- []()
+- []()
+- []()
+- []()
+
+<br>
 
 >## Projekt Settings (Visual Studio Code)
+
 ![](/public/img/LiveSassCompiler.png)![](/public/img/settings.json4LSC_sm.png)
 
-1. `package.json` erstellen
+### `package.json` erstellen ###
+
 ```bash
 node init 
 ```
@@ -48,3 +62,5 @@ npm i --save sequelize sqlite3
 ```bash
 npm i --save body-parser
 ```
+
+>## Mapping mit `sequelize`
