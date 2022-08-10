@@ -1,5 +1,5 @@
  #  Node.js App auf Express, SQLite und Sequelize als ORM (Object Relational Mapper)
- ---
+
  <a href="https://code.visualstudio.com/"><img src="/public/img/vscode-svgrepo-com.svg" width="99px" alt="Visual Studio Cpode Logo"> <a href="https://expressjs.com/de/"><img src="/public/img/node-js.png" width="179px" alt="Visual Studio Cpode Logo"></a><a href="https://www.sqlite.org/index.html"><img src="/public/img/sqlite.png" width="199px" alt="Sequelize Logo"></a> <a href="https://sequelize.org/"><img src="/public/img/logo.svg" width="88px" alt="Sequelize Logo"></a> 
 
 ---
