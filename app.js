@@ -50,9 +50,9 @@ models.sequelize.sync ({force: true}).then (function () {
     })
 
     app.get ("/created", function (req, res) {
-        console.log('req.query:');
-        console.dir(req.query);
-        console.log('end req.query');
+        // console.log('req.query:');
+        // console.dir(req.query);
+        // console.log('end req.query');
         
         let id = parseInt (req.query.id, 10)
         // models.Url.findById(id).then (function (obj) {
