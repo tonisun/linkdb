@@ -18,15 +18,17 @@ models.sequelize.sync ({force: true}).then (function () {
 
     app.use ("/public", express.static("public"))
 
-    app.get ("/", function (req, res) {
-        let id = parseInt (req.query.id, 10)
-        // console.log(id)
-        if (isNaN(id)) {
+    app.get ("/", function (req, res, next) {
+        let id = parseInt (req.query.q, 10)
+        console.log('/?q='+id)
+        if (isNaN (id)) {
             res.render ("pages/index")
         } else {
-            models.Url.findByPk(id).then (function (obj) {
+            models.Url.findByPk (id).then (function (obj) {
                 if (obj == null) {
-                    res.end("FEHLER!")
+                    var err = new Error ("FEHLER")
+                    err.status = 404  // ??? id wurde nicht gefunden und nicht ein Site
+                    next (err)
                 } else {
                     res.render ("pages/redirect", {
                         url: obj
@@ -49,7 +51,7 @@ models.sequelize.sync ({force: true}).then (function () {
         })
     })
 
-    app.get ("/created", function (req, res) {
+    app.get ("/created", function (req, res, next) {
         // console.log('req.query:');
         // console.dir(req.query);
         // console.log('end req.query');
@@ -58,10 +60,12 @@ models.sequelize.sync ({force: true}).then (function () {
         // models.Url.findById(id).then (function (obj) {
         models.Url.findByPk(id).then (function (obj) {
             if (obj == null) {
-                res.end ("FEHLER")
+                var err = new Error ("FEHLER")
+                err.status = 404  // ??? id wurde nicht gefunden und nicht ein Site
+                next (err)
             } else {
                 console.dir (obj.dataValues)
-                res.render("pages/created", {
+                res.render ("pages/created", {
                     id: obj.dataValues.id,
                     url: obj.dataValues.url,
                     desc: obj.dataValues.desc,
@@ -70,6 +74,25 @@ models.sequelize.sync ({force: true}).then (function () {
                 })
             }
         })
+    })
+
+    app.get ("/test-error", function (req, res) {
+        let err = new Error ('Test123')
+        err.status = 404
+        throw err
+    })
+
+    /**
+     * Error Handling
+     */
+    app.use (function (err, req, res, next) {
+        let status = 500
+        if (err.status) {
+            status = err.status
+        }
+        // console.log ('Err-Log: Error aufgetreten!');
+        console.error (err.stack)
+        res.status (status).send ('Something broke!')
     })
 
     app.listen (8080, function () {
