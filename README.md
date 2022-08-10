@@ -11,9 +11,12 @@
 >## Inhalte 
 
 - [Projekt Settings (Visual Studio Code)](#projekt-settings-visual-studio-code)
+
   - [`package.json` erstellen](#packagejson-erstellen)
-  - [`express` Module installieren](#express-module-installieren)
+  - [`express` Module installieren](#express--module-installieren)
+
 - [Mapping mit `sequelize`](#mapping-mit-sequelize)
+
 - []()
 - []()
 - []()
