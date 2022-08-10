@@ -5,7 +5,7 @@ let sequelize = new Sequelize (null, null, null, {
 })
 
 /**
- * Model Url mapped show
+ * Model Url muppet show
  */
 let Url = sequelize.define ("url", {
     url: {
@@ -19,7 +19,7 @@ let Url = sequelize.define ("url", {
 })
 
 /**
- * 
+ * Exportiere Model
  */
 module.exports = {
     sequelize: sequelize,

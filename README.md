@@ -38,3 +38,9 @@ npm i bootstrap --save
 ```bash
 npm i --save sequelize sqlite3
 ```
+
+6. `body-parser` Module instalieren. Ein Module für  Express Server der die POST Daten parzt
+
+```bash
+npm i --save body-parser
+```

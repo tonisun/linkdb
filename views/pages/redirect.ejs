@@ -10,8 +10,17 @@
 <!-- <div class="card shadow" style="height: 110px;"> -->
 <div class="card shadow" style="width: auto;">
     <img src="../../public/img/colorful-wall_sm1.png" class="card-img-top" alt="BauchMessen">
-    <%- include('./index/form') -%>
+    <div class="card-body">
+        <h5 class="card-title">Sie werden weitergeleitet ...</h5>
+        <h4><%= url.url %></h4>
+    </div>
+    <div class="card-footer text-muted text-center">
+        <p>&copy; 2022 ToniSun</p>
+    </div>
 </div>
 
+<script>
+    let url = "url.url"
+</script>
 
 <%- include('../partials/footer') -%>
