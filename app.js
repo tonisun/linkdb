@@ -20,7 +20,7 @@ models.sequelize.sync ({force: true}).then (function () {
 
     app.get ("/", function (req, res, next) {
         let id = parseInt (req.query.q, 10)
-        console.log('/?q='+id)
+        // console.log('/?q='+id)
         if (isNaN (id)) {
             res.render ("pages/index")
         } else {
@@ -66,11 +66,12 @@ models.sequelize.sync ({force: true}).then (function () {
             } else {
                 console.dir (obj.dataValues)
                 res.render ("pages/created", {
-                    id: obj.dataValues.id,
-                    url: obj.dataValues.url,
-                    desc: obj.dataValues.desc,
-                    createdAt: obj.dataValues.createdAt,
-                    updatedAt: obj.dataValues.updatedAt
+                    url: obj.dataValues
+                    // id: obj.dataValues.id,
+                    // url: obj.dataValues.url,
+                    // desc: obj.dataValues.desc,
+                    // createdAt: obj.dataValues.createdAt,
+                    // updatedAt: obj.dataValues.updatedAt
                 })
             }
         })
